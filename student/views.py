@@ -1,4 +1,4 @@
-from common.execute_raw_query import ExecuteQuery
+from common.execute_raw_query import fetch_records
 from common.responses import response
 
 # https://flask.palletsprojects.com/en/1.1.x/patterns/wtforms/
@@ -11,8 +11,7 @@ def student_operations(request, id=None):
             if id:
                 return response('retrieve', 'success', {})
             query = "select * from cms_users"
-            query_obj = ExecuteQuery()
-            result = query_obj.fetch_records(query)
+            result = fetch_records(query)
             return response('retrieve', 'success', {"data": result})
 
         elif request.method == 'PUT':
