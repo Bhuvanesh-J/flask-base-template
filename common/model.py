@@ -1,6 +1,6 @@
 import uuid
 
-from app import db
+from settings.build_app import db
 
 
 class BaseModel(db.Model):

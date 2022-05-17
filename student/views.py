@@ -1,6 +1,7 @@
 from common.execute_raw_query import fetch_records
 from common.responses import response
 
+
 # https://flask.palletsprojects.com/en/1.1.x/patterns/wtforms/
 def student_operations(request, id=None):
     try:

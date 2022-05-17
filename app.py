@@ -1,9 +1,8 @@
-
 from settings.build_app import create_app
+from settings.register_blueprint import register_blueprint
 
 app = create_app()
-from flask_sqlalchemy import SQLAlchemy
-db = SQLAlchemy(app)
+register_blueprint(app)
 
 if __name__ == "__main__":
     # print(app.url_map)
