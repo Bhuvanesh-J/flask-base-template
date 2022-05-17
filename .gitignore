@@ -11,4 +11,4 @@ logs/*
 */__pycache__/
 !.gitignore
 'git rm --cached .'
-*/migrations/
+.migrations/*
