@@ -55,5 +55,4 @@ def save_to_student(payload):
     if 'dob' in payload and payload['dob']:
         student_obj.dob = payload['dob']
     student_obj.deleted_at = payload['dob']
-
     return commit_object_to_db(student_obj)
