@@ -1,14 +1,16 @@
 from flask import Blueprint, request
 
 from authentication.views import signup_views, login_views, logout_views
+from student.models import Student
 
 authentication = Blueprint('authentication-api', __name__, url_prefix='/api/v1/authentication/')
 
-authentication.route('signup', methods=['POST'])
 
 
-@authentication.route('login', methods=['POST'])
+@authentication.route('signup', methods=['POST'])
 def signup_controller():
+    s = Student()
+
     return signup_views(request)
 
 

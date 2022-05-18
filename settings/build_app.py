@@ -16,6 +16,6 @@ def create_app():
     middleware(app)
 
     db.init_app(app)
-    Migrate(app, db)
+    migrate = Migrate(app, db)
     global_errorhandler(app)
     return app

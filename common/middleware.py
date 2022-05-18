@@ -9,9 +9,7 @@ def middleware(app):
         try:
             # request.endpoint,request.url,request.path
             api = ((request.path).split('?')[0]).split('/')
-            # print(api)
-
-            if 'authentication' in api:
+            if api[-1] in ['signup']:
                 pass
             else:
                 return response('create', 'unauthorized', {})
