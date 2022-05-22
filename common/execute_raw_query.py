@@ -7,14 +7,15 @@ def _return_dict(cursor_object):
 
 
 def fetch_records(query):
-    from app import db
+    from settings.build_app import db
 
     cursor_object = db.engine.execute(query)
     return _return_dict(cursor_object)
 
 
 def execute_query_without_return_value(query):
-    from app import db
+    from settings.build_app import db
     cursor_object = db.engine.execute(query)
+    print(cursor_object)
     cursor_object.close()
     return None
