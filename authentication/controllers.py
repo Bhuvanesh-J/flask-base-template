@@ -9,7 +9,6 @@ from student.models import Student
 
 s = Student()
 
-
 @authentication.route('signup', methods=['POST'])
 def signup_controller():
 
